@@ -1,0 +1,22 @@
+# West manifest for a_macropad. The workspace root is the repo root:
+#   west init -l firmware && west update
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: v4.5.0
+      import:
+        # Only the modules the RP2040 build needs.
+        name-allowlist:
+          - cmsis
+          - cmsis_6
+          - hal_rpi_pico
+          - picolibc
+          - segger
+
+  self:
+    path: firmware

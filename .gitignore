@@ -1,0 +1,12 @@
+# Zephyr workspace (managed by west, see firmware/west.yml)
+/.west/
+/zephyr/
+/modules/
+/bootloader/
+/tools/
+
+# Python env
+/.venv/
+
+# Build output
+build/
