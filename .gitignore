@@ -10,3 +10,10 @@
 
 # Build output
 build/
+
+# KiCad: per-user state, caches, backups and lock files
+*-backups/
+*.kicad_prl
+fp-info-cache
+*.lck
+.history/
